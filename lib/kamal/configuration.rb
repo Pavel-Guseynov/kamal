@@ -14,7 +14,7 @@ class Kamal::Configuration
 
   include Validation
 
-  PROXY_MINIMUM_VERSION = "v0.8.4"
+  PROXY_MINIMUM_VERSION = "v0.8.6"
   PROXY_HTTP_PORT = 80
   PROXY_HTTPS_PORT = 443
   PROXY_LOG_MAX_SIZE = "10m"
@@ -262,7 +262,7 @@ class Kamal::Configuration
   end
 
   def proxy_image
-    "basecamp/kamal-proxy:#{PROXY_MINIMUM_VERSION}"
+    "pavelguseynov/kamal-proxy:#{PROXY_MINIMUM_VERSION}"
   end
 
   def proxy_container_name
