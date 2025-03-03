@@ -106,3 +106,10 @@ proxy:
     response_headers:
       - X-Request-ID
       - X-Request-Start
+
+  # Path-based routing
+  #
+  # Configure kamal-proxy to route requests only with this path prefix.
+  path_prefix: /api
+  # By default, the path prefix will be stripped from the request before it is forwarded upstream.
+  strip_path_prefix: true

@@ -43,7 +43,9 @@ class Kamal::Configuration::Proxy
       "max-response-body": proxy_config.dig("buffering", "max_response_body"),
       "forward-headers": proxy_config.dig("forward_headers"),
       "log-request-header": proxy_config.dig("logging", "request_headers") || DEFAULT_LOG_REQUEST_HEADERS,
-      "log-response-header": proxy_config.dig("logging", "response_headers")
+      "log-response-header": proxy_config.dig("logging", "response_headers"),
+      "path-prefix": proxy_config["path_prefix"].presence,
+      "strip-path-prefix": proxy_config["strip-path-prefix"].presence
     }.compact
   end
 
